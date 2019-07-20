@@ -1,0 +1,12 @@
+page {
+    background-color: #efeff4;
+    height: 100%;
+    color: #535252;
+    font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+    font-size: 28rpx;
+    line-height: 1.4;
+}
+
+.scroll-container {
+    height: 100%;
+}

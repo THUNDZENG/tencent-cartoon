@@ -1,0 +1,52 @@
+{
+    "pages": [
+        "index/index",
+        "bookshelf/bookshelf",
+        "category/category",
+        "search/search",
+        "list-simple/list-simple",
+        "list-rank/list-rank",
+        "detail/detail",
+        "view/view",
+        "detail/chapter-list"
+    ],
+    "window": {
+        "backgroundColor": "#efeff4",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f9f9f9",
+        "navigationBarTitleText": "腾讯动漫",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#7f8389",
+        "selectedColor": "#ff9a6a",
+        "borderStyle": "black",
+        "backgroundColor": "#f7f7fa",
+        "list": [
+            {
+                "pagePath": "index/index",
+                "text": "首页",
+                "iconPath": "public/images/tab-icon-index.png",
+                "selectedIconPath": "public/images/active-tab-icon-index.png"
+            },
+            {
+                "pagePath": "bookshelf/bookshelf",
+                "text": "书架",
+                "iconPath": "public/images/tab-icon-bookshelf.png",
+                "selectedIconPath": "public/images/active-tab-icon-bookshelf.png"
+            },
+            {
+                "pagePath": "category/category",
+                "text": "分类",
+                "iconPath": "public/images/tab-icon-category.png",
+                "selectedIconPath": "public/images/active-tab-icon-category.png"
+            },
+            {
+                "pagePath": "search/search",
+                "text": "搜索",
+                "iconPath": "public/images/tab-icon-search.png",
+                "selectedIconPath": "public/images/active-tab-icon-search.png"
+            }
+        ]
+    }
+}
