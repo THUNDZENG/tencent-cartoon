@@ -1,0 +1,64 @@
+.float-bar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 120rpx;
+    background-color: rgba(40,40,40,.95);
+    transition: opacity 300ms ease,visibility 300ms ease,-webkit-transform 300ms ease;
+    transition: opacity 300ms ease,visibility 300ms ease,transform 300ms ease;
+    transition: opacity 300ms ease,visibility 300ms ease,transform 300ms ease,-webkit-transform 300ms ease;
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0,0,0);
+}
+
+.float-bar.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.float-bar.bottom-bar {
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0,0,0,.26);
+}
+
+.float-bar.bottom-bar.hidden {
+    transform: translate3d(0,100%,0);
+}
+
+.float-bar.top-bar {
+    top: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,.26);
+}
+
+.float-bar.top-bar.hidden {
+    transform: translate3d(0,-100%,0);
+}
+
+.float-bar-btn {
+    display: block;
+    width: 120rpx;
+    text-align: center;
+}
+
+.float-bar-btn.flex {
+    flex: 1;
+}
+
+.float-bar-btn-icon {
+    display: block;
+    margin: 30rpx auto;
+    width: 54rpx;
+    height: 54rpx;
+}
+
+.float-title {
+    display: block;
+    flex: 3;
+    margin: 0 30rpx;
+    color: #969696;
+    font-size: 32rpx;
+}

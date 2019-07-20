@@ -1,0 +1,4 @@
+<import src="comic-pic-list/comic-pic-list.wxml"></import>
+<import src="float-bar/float-bar.wxml"></import>
+<template is="comic-pic-list" data="{{...comicPicListCtrl}}"></template>
+<template is="float-bar" data="{{...floatBarCtrl}}"></template>

@@ -1,0 +1,210 @@
+@import "../__wuBaseWxss__/10.wxss";
+
+@import "../public/comic-list/comic-list.wxss";
+
+.block-title {
+    display: flex;
+    align-items: center;
+    height: 72rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    border-bottom: 1rpx solid #c5c5c5;
+}
+
+.block-title-text {
+    display: block;
+    flex: 1;
+    min-width: 1%;
+}
+
+.block-title-icon {
+    display: block;
+    width: 33rpx;
+    height: 33rpx;
+    padding: 20rpx;
+    margin: -20rpx;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 88rpx;
+    box-sizing: border-box;
+    background-color: #efeff4;
+    border-bottom: 1rpx solid #d6d6db;
+    overflow: hidden;
+}
+
+.under-search-form {
+    position: absolute;
+    z-index: 1;
+    top: 88rpx;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.search-result-list {
+    height: 100%;
+}
+
+.search-result-empty {
+    background: #f0eff5;
+}
+
+.search-result-empty-info {
+    padding: 85rpx;
+    background: #fff;
+    color: #969696;
+    text-align: center;
+    font-size: 22rpx;
+}
+
+.search-word-strong {
+    color: #ff9a69;
+}
+
+.search-recommend-list-title {
+    margin-top: 20rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    background: #fff;
+    border-bottom: 1rpx solid #eeeeee;
+    color: #969696;
+    font-size: 26rpx;
+}
+
+.btn-confirm-search {
+    display: block;
+    padding: 0 15rpx 0 0;
+    background: 0 none;
+    border: 0 none;
+    color: #ff9a6a;
+    font-size: 32rpx;
+}
+
+.search-text-input-box {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    margin: 16rpx 15rpx;
+    height: 54rpx;
+    background: #fff;
+    border: 1rpx solid #e6e6ea;
+    border-radius: 10rpx;
+    color: #535252;
+    font-size: 26rpx;
+}
+
+.search-text-input {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 56rpx 0 56rpx;
+    height: 54rpx;
+    color: #535252;
+    font-size: 26rpx;
+}
+
+.search-text-icon {
+    position: absolute;
+    z-index: 2;
+    top: 10rpx;
+    left: 15rpx;
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.search-clear-icon {
+    position: absolute;
+    z-index: 2;
+    top: 1rpx;
+    right: 5rpx;
+    padding: 10rpx;
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.hot-words {
+    background: #fff;
+    margin-bottom: 20rpx;
+    overflow: hidden;
+}
+
+.icon-refresh.trans {
+    transition: transform 800ms ease;
+    transition: transform 800ms ease,-webkit-transform 800ms ease;
+}
+
+.icon-refresh.rotated {
+    transform: rotate(720deg);
+}
+
+.hot-words-list {
+    margin: 0 30rpx 30rpx 30rpx;
+}
+
+.hot-word {
+    display: inline-block;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin: 30rpx 30rpx 0 0;
+    padding: 0 20rpx;
+    border: 1rpx solid #c5c5c5;
+    border-radius: 5rpx;
+    color: #333333;
+    font-size: 28rpx;
+}
+
+.input-history {
+    background: #fff;
+}
+
+.input-history-item {
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    border-bottom: 1rpx solid #c5c5c5;
+}
+
+.input-history-icon {
+    display: block;
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 10rpx;
+}
+
+.input-history-text {
+    display: block;
+    flex: 1;
+    min-width: 1%;
+    color: #535252;
+    font-size: 32rpx;
+}
+
+.relate-word-list {
+    position: fixed;
+    z-index: 10;
+    top: 88rpx;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+
+.relate-word-item {
+    display: block;
+    height: 88rpx;
+    line-height: 88rpx;
+    box-sizing: border-box;
+    padding: 0 66rpx;
+    border-bottom: 1rpx solid #eeeeee;
+}

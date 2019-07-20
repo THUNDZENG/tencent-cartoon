@@ -1,0 +1,22 @@
+<template name="float-bar">
+    <view bindtap="{{onTap}}" class="float-bar top-bar {{state}}" data-name="{{name}}">
+        <text class="float-title text-overflow">{{title}}</text>
+        <view class="float-bar-btn" data-btn-name="Home">
+            <image class="float-bar-btn-icon" data-btn-name="Home" src="/view/float-bar/images/icon-home.png"></image>
+        </view>
+        <view class="float-bar-btn" data-btn-name="Detail">
+            <image class="float-bar-btn-icon" data-btn-name="Detail" src="/view/float-bar/images/icon-detail.png"></image>
+        </view>
+    </view>
+    <view bindtap="{{onTap}}" class="float-bar bottom-bar {{state}}" data-name="{{name}}">
+        <view class="float-bar-btn flex" data-btn-name="ChapterList">
+            <image class="float-bar-btn-icon" data-btn-name="ChapterList" src="/view/float-bar/images/icon-chapter-list.png"></image>
+        </view>
+        <view class="float-bar-btn flex" data-btn-name="PrevChap">
+            <image class="float-bar-btn-icon" data-btn-name="PrevChap" src="/view/float-bar/images/icon-prev.png"></image>
+        </view>
+        <view class="float-bar-btn flex" data-btn-name="NextChap">
+            <image class="float-bar-btn-icon" data-btn-name="NextChap" src="/view/float-bar/images/icon-next.png"></image>
+        </view>
+    </view>
+</template>

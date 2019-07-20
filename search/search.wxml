@@ -1,0 +1,55 @@
+<import src="../public/comic-list/comic-list.wxml"></import>
+<view class="search-form">
+    <view class="search-text-input-box">
+        <image class="search-text-icon" src="images/icon-search.png"></image>
+        <input bindconfirm="_doSearch" bindinput="_onTextChange" class="search-text-input" placeholder="搜索" type="text" value="{{resetText}}"></input>
+        <image bindtap="_clearSearchText" class="search-clear-icon" hidden="{{searchText.length<=0}}" src="images/icon-clear.png"></image>
+    </view>
+    <text bindtap="_doSearch" class="btn-confirm-search">搜索</text>
+</view>
+<scroll-view class="under-search-form" hidden="{{!showRecommend}}" scrollY="true">
+    <view class="hot-words">
+        <view class="block-title">
+            <text class="block-title-text">热门搜索</text>
+            <image bindtap="_changeHotWordsOffset" class="block-title-icon icon-refresh" src="images/icon-refresh.png"></image>
+        </view>
+        <view class="hot-words-list">
+            <text bindtap="_goComicDetail" class="hot-word" data-comic-id="{{item.comic_id}}" data-comic-title="{{item.title}}" wx:for="{{hotWords}}" wx:key="{{item.comic_id}}">{{item.title}}</text>
+        </view>
+    </view>
+    <view class="input-history" hidden="{{historyWords.length<=0}}">
+        <view class="block-title">
+            <text class="block-title-text">最近搜索</text>
+            <image bindtap="_clearSearchHistory" class="block-title-icon icon-refresh" src="images/icon-delete.png"></image>
+        </view>
+        <view class="input-history-list">
+            <view bindtap="_goComicDetail" class="input-history-item" data-comic-id="{{item.comic_id}}" data-comic-title="{{item.title}}" wx:for="{{historyWords}}" wx:key="{{item.comic_id}}">
+                <image class="input-history-icon" src="images/icon-history.png"></image>
+                <text class="input-history-text">{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="relate-word-list" hidden="{{searchText.length<=0||relateWords.length<=0}}">
+        <text bindtap="_goComicDetail" class="relate-word-item" data-comic-id="{{item.comic_id}}" data-comic-title="{{item.title}}" wx:for="{{relateWords}}" wx:key="{{item.comic_id}}">{{item.title}}</text>
+    </view>
+</scroll-view>
+<scroll-view class="under-search-form" hidden="{{!showResultEmpty}}" scrollY="true">
+    <view class="search-result-empty">
+        <view class="search-result-empty-info">
+            <text>企鹅娘没有搜索到“</text>
+            <text class="search-word-strong">{{searchText}}</text>
+            <text>”一词哦:)</text>
+        </view>
+        <view class="search-recommend-list-title">
+            <text>骚年们正在搜 ~</text>
+        </view>
+        <view class="search-recommend-list">
+            <template is="comic-list" data="{{...recommendListCtrl}}"></template>
+        </view>
+    </view>
+</scroll-view>
+<view class="under-search-form" hidden="{{!showResult}}">
+    <view class="search-result-list">
+        <template is="scroll-comic-list" data="{{...resultListCtrl}}"></template>
+    </view>
+</view>

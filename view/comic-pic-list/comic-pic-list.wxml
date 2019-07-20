@@ -1,0 +1,17 @@
+<template name="comic-pic-list">
+    <scroll-view bindscroll="{{onScroll}}" bindscrolltolower="{{onScrollLower}}" bindtap="{{onTap}}" class="scroll-container" data-name="{{name}}" lowerThreshold="50" scrollIntoView="{{scrollToId}}" scrollY="true">
+        <text class="nav-ctrl-btn" data-btn-name="PrevChap">{{firstLoadChap>1?'点击加载上一章节':'前面没有更多了~'}}</text>
+        <view binderror="{{onPicError}}" bindload="{{onPicLoad}}" class="comic-pic-list" data-chap-seq="{{chapSeq}}" wx:for="{{data}}" wx:for-index="chapSeq" wx:for-item="chapList" wx:key="{{chapSeq}}">
+            <view class="comic-pic" id="pic_{{chapSeq}}_{{pic.pid}}" wx:for="{{chapList}}" wx:for-index="picCur" wx:for-item="pic" wx:key="{{pic.pid}}">
+                <view class="comic-pic-pad" style="padding-top: {{pic.height*100/pic.width}}%;"></view>
+                <image binderror="{{onError}}" bindload="{{onLoad}}" class="comic-pic-img" data-chap-seq="{{chapSeq}}" data-name="{{name}}" data-pic-cur="{{picCur}}" src="{{pic.showUrl||''}}"></image>
+            </view>
+        </view>
+        <text class="nav-ctrl-btn" data-btn-name="NextChap" wx:if="{{!lastChapState&&(isTouchPicLimit||isNextChapVipLimit)}}">{{isNextChapVipLimit?'下一话是付费章节~':lastLoadChap<lastChapSeqNo?'点击加载下一章节':'后面没有更多了~'}}</text>
+        <view class="chap-end-info" wx:if="{{lastChapState}}">
+            <text class="chap-end-info-title">{{lastChapState=='finished'?'已完结':'未完待续'}}</text>
+            <text class="chap-end-info-text">{{lastChapState=='finished'?'':'作者大大正在埋头苦画中~'}}</text>
+        </view>
+    </scroll-view>
+</template>
+<import src="../../public/comic-list/comic-list.wxml"></import>
