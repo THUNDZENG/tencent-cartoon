@@ -1,0 +1,21 @@
+<template name="top5">
+    <view class="comic-list {{style}}">
+        <view bindtap="{{onTap}}" class="comic-item {{style}} index-{{index+1}}" data-comic-id="{{item.comic_id}}" data-name="{{name}}" wx:for="{{data}}" wx:key="{{item.comic_id}}">
+            <view class="comic-item-inner {{style}}">
+                <view class="comic-cover {{style}}">
+                    <view class="comic-cover-pad {{style}}"></view>
+                    <image class="comic-cover-image {{style}}" mode="aspectFill" src="{{item.cover_url}}"></image>
+                </view>
+                <view class="comic-info {{style}}">
+                    <text class="comic-title text-overflow {{style}} {{index<3?'white':''}}">{{item.title}}</text>
+                    <text class="comic-tags {{style}} {{index<3?'white':''}}">{{item.type}}</text>
+                    <view class="comic-hot text-overflow {{style}} {{index<3?'white':''}}">
+                        <image class="comic-hot-icon {{style}}" src="/index/channel/images/top5-icon-hot-{{index<3?'1':'2'}}.png"></image>
+                        <text>{{item.desc_pgv_count||'人气爆表！'}}</text>
+                    </view>
+                </view>
+                <image class="comic-top5-bg {{style}}" src="/index/channel/images/top5-bg-{{index+1}}.png"></image>
+            </view>
+        </view>
+    </view>
+</template>

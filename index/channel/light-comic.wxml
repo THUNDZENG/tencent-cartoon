@@ -1,0 +1,20 @@
+<template name="light-comic">
+    <view class="comic-list {{style}}">
+        <view bindtap="{{onTap}}" class="comic-item {{style}}" data-comic-id="{{item.comic_id}}" data-name="{{name}}" wx:for="{{data}}" wx:key="{{item.comic_id}}">
+            <view class="comic-item-inner {{style}}">
+                <view class="comic-cover {{style}}">
+                    <view class="comic-cover-pad {{style}}"></view>
+                    <image class="comic-cover-image {{style}}" mode="aspectFill" src="{{item.cover_url}}"></image>
+                </view>
+                <view class="comic-info {{style}}">
+                    <view class="comic-title {{style}}">
+                        <text>《{{item.title}}》</text>
+                        <text class="comic-tag color-{{index}}">{{item.theme[0]}}</text>
+                    </view>
+                    <text class="comic-artist {{style}}">来自：{{item.artist_name}}</text>
+                    <text class="comic-chapter-title text-overflow {{style}}">第{{item.lated_seqno}}话{{item.chap_title?'：'+item.chap_title:''}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

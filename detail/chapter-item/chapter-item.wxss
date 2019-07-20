@@ -1,0 +1,86 @@
+.chapter-list {
+    background: #fff;
+}
+
+.chapter-item {
+    display: flex;
+    align-items: center;
+    height: 130rpx;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #c5c5c5;
+}
+
+.chapter-item.light-comic {
+    height: 168rpx;
+}
+
+.chapter-cover {
+    display: block;
+    width: 272rpx;
+    height: 127rpx;
+    margin: 20rpx 20rpx 20rpx 0;
+}
+
+.chapter-info {
+    flex: 1;
+    height: auto;
+    min-width: 1%;
+    color: #9a9a9a;
+    font-size: 28rpx;
+}
+
+.chapter-info.light-comic {
+    height: 66rpx;
+}
+
+.chapter-icon,.icon-like {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.chapter-seq-no {
+    color: #333333;
+}
+
+.chapter-seq-no.read-locate,.chapter-title.read-locate {
+    color: #ff9a6a;
+}
+
+.update-time {
+    display: block;
+    height: 28rpx;
+    color: #c5c5c5;
+    font-size: 24rpx;
+}
+
+.chapter-like {
+    margin: 12rpx 0;
+}
+
+.text-like {
+    margin-left: 4rpx;
+    color: #969696;
+    font-size: 24rpx;
+}
+
+.chapter-info {
+    position: relative;
+    z-index: 1;
+}
+
+.state-icon {
+    position: absolute;
+    z-index: 2;
+    right: 0rpx;
+    top: 0rpx;
+}
+
+.state-icon {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.state-icon.wide-tag {
+    width: 50rpx;
+    height: 34rpx;
+}

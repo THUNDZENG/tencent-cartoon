@@ -1,0 +1,19 @@
+<template name="rise-top2">
+    <view class="comic-list {{style}}">
+        <view bindtap="{{onTap}}" class="comic-item {{style}}" data-comic-id="{{item.comic_id}}" data-name="{{name}}" wx:for="{{data}}" wx:key="{{item.comic_id}}">
+            <view class="comic-item-inner {{style}}">
+                <view class="comic-cover {{style}}">
+                    <view class="comic-cover-pad {{style}}"></view>
+                    <image class="comic-cover-image {{style}}" mode="aspectFill" src="{{item.cover_url}}"></image>
+                </view>
+                <view class="comic-info {{style}}">
+                    <text class="comic-title text-overflow {{style}}">{{item.title}}</text>
+                    <text class="comic-update {{style}}">更新至{{item.lated_seqno}}话</text>
+                    <text class="comic-tags {{style}}">{{item.desc_tags}}</text>
+                    <text class="comic-desc text-overflow {{style}}">{{item.brief_intrd}}</text>
+                </view>
+                <image class="comic-top-icon {{style}}" src="/index/channel/images/icon-top-{{index+1}}.png"></image>
+            </view>
+        </view>
+    </view>
+</template>

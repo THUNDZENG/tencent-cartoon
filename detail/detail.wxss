@@ -1,0 +1,233 @@
+@import "../__wuBaseWxss__/10.wxss";
+
+@import "../public/comic-list/comic-list.wxss";
+
+@import "chapter-item/chapter-item.wxss";
+
+@import "chapter-nav-btns/chapter-nav-btns.wxss";
+
+.cover-box {
+    position: relative;
+    z-index: 1;
+    height: 292rpx;
+    overflow: hidden;
+}
+
+.comic-cover-bg {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.comic-cover-bg.use-blur {
+    filter: blur(15px);
+}
+
+.comic-cover-mask,.light-comic-cover-mask {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.comic-cover-mask {
+    background: rgba(0,0,0,0.2);
+}
+
+.comic-cover.in-banner {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    right: 108rpx;
+    width: 210rpx;
+    height: 280rpx;
+}
+
+.comic-info.in-banner {
+    position: absolute;
+    z-index: 5;
+    bottom: 80rpx;
+    left: 70rpx;
+    color: #fff;
+    font-size: 22rpx;
+    line-height: 1.8;
+}
+
+.comic-artist,.comic-pgv,.comic-month-ticket,.comic-pay-type {
+    display: block;
+}
+
+.comic-title.in-banner {
+    max-width: 260rpx;
+    font-size: 38rpx;
+    margin-right: 10rpx;
+    color: #fff;
+}
+
+.comic-artist,.comic-pay-type {
+    text-decoration: underline;
+}
+
+.collect-box {
+    display: flex;
+    padding: 0 30rpx;
+    align-items: center;
+    height: 150rpx;
+    background: #fff;
+}
+
+.icon-collect {
+    margin-left: 10rpx;
+    width: 54rpx;
+    height: 54rpx;
+}
+
+.text-collect {
+    margin-top: 15rpx;
+    margin-right: 40rpx;
+    color: #969696;
+    font-size: 20rpx;
+}
+
+.btn-read-comic {
+    flex: 1;
+    display: block;
+    min-width: 1%;
+    height: 90rpx;
+    border-radius: 90rpx;
+    line-height: 90rpx;
+    background: #ff9a6a;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: center;
+}
+
+.tab-box {
+    background: #fff;
+}
+
+.tab-indicator {
+    display: flex;
+    align-items: center;
+    margin: 0 20rpx;
+    border-bottom: 1rpx solid #969696;
+    background: #fff;
+}
+
+.tab-indicator {
+    top: 0;
+    z-index: 200;
+    position: relative;
+    position: -webkit-sticky;
+}
+
+.tab-content {
+    background: #f0eff5;
+}
+
+.tab-indicator-item {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    min-width: 1%;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #969696;
+    font-size: 32rpx;
+    text-align: center;
+}
+
+.tab-indicator-item.current {
+    color: #333333;
+}
+
+.icon-order {
+    width: 32rpx;
+    height: 32rpx;
+    transform: rotate(180deg);
+}
+
+.icon-order.desc {
+    transform: rotate(0deg);
+}
+
+.comment-count {
+    position: absolute;
+    left: 50%;
+    margin-left: 32rpx;
+    bottom: 22rpx;
+    font-size: 20rpx;
+    line-height: 1;
+}
+
+.float-tab-indicator {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transition: opacity 150ms ease,-webkit-transform 150ms ease;
+    transition: transform 150ms ease,opacity 150ms ease;
+    transition: transform 150ms ease,opacity 150ms ease,-webkit-transform 150ms ease;
+    transform: translate3d(0,-100%,0);
+    opacity: 0;
+}
+
+.float-tab-indicator.show {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}
+
+.comic-desc {
+    padding: 28rpx 50rpx;
+    background: #fff;
+}
+
+.comic-desc-title {
+    display: block;
+    margin-bottom: 14rpx;
+    color: #969696;
+    font-size: 28rpx;
+}
+
+.comic-desc-content {
+    display: block;
+    color: #333333;
+    font-size: 32rpx;
+    line-height: 1.4;
+}
+
+.comic-tag-and-score {
+    margin-top: 32rpx;
+}
+
+.comic-score {
+    margin-left: 14rpx;
+    color: #969696;
+    font-size: 26rpx;
+}
+
+.recommend-box {
+    margin-top: 20rpx;
+    background: #fff;
+}
+
+.recommend-list-title {
+    height: 80rpx;
+    line-height: 80rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    color: #969696;
+    font-size: 28rpx;
+}
+
+.comic-list.grid-column-3 {
+    margin-top: 0;
+}

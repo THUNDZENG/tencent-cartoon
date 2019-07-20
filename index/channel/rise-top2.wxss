@@ -1,0 +1,51 @@
+.comic-item.rise-top2 {
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+    border-bottom: 1rpx solid #c5c5c5;
+}
+
+.comic-item-inner.rise-top2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+
+.comic-cover.rise-top2 {
+    width: 180rpx;
+}
+
+.comic-info.rise-top2 {
+    flex: 1;
+    margin-left: 22rpx;
+}
+
+.comic-title.rise-top2 {
+    margin-bottom: 20rpx;
+    color: #ff9a69;
+    font-size: 34rpx;
+}
+
+.comic-update.rise-top2,.comic-tags.rise-top2 {
+    display: block;
+    font-size: 26rpx;
+    color: #888888;
+}
+
+.comic-desc.rise-top2 {
+    margin-top: 16rpx;
+    color: #b2b2b2;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.comic-top-icon.rise-top2 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 84rpx;
+    height: 84rpx;
+}

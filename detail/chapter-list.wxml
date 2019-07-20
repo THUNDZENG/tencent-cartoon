@@ -1,0 +1,20 @@
+<import src="chapter-item/chapter-item.wxml"></import>
+<import src="chapter-nav-btns/chapter-nav-btns.wxml"></import>
+<scroll-view bindscroll="_onScroll" class="scroll-container" scrollIntoView="{{scrollToId}}" scrollY="true">
+    <view class="list-header">
+        <view class="chapter-count">
+            <text>共{{chapterList.length||'??'}}话，{{comicData.finish_state==2?'已完结':'连载中'}}</text>
+        </view>
+        <view bindtap="_onTapOrder" class="chapter-order">
+            <image class="icon-order {{chapterOrder}} inline-middle" src="images/icon-chapter-list-order.png"></image>
+            <text>{{chapterOrder=='desc'?'倒序':'正序'}}</text>
+        </view>
+    </view>
+    <view class="chapter-list" hidden="{{chapterOrder=='desc'}}">
+        <template is="chapter-item" data="{{list:chapterList,itemIdHead:'item_',style:'lite'}}"></template>
+    </view>
+    <view class="chapter-list desc" hidden="{{chapterOrder!='desc'}}">
+        <template is="chapter-item" data="{{list:chapterListRev,itemIdHead:'rev_item_',style:'lite'}}"></template>
+    </view>
+    <template is="chapter-nav-btns" data="{{scrollDirection:scrollDirection}}"></template>
+</scroll-view>

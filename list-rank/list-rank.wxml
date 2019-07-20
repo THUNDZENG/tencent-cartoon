@@ -1,0 +1,17 @@
+<import src="../public/comic-list/comic-list.wxml"></import>
+<scroll-view bindscrolltolower="{{onScrollLower}}" class="comic-list-wrap" data-name="{{name}}" lowerThreshold="50" scrollTop="{{scrollTop}}" scrollY="true">
+    <view class="rank-list-head">
+        <view bindtap="_onTapComic" class="rank-list-head-item item-{{index}}" data-comic-id="{{item.comic_id}}" wx:for="{{listHead}}" wx:key="{{item.comic_id}}">
+            <view class="comic-cover item-{{index}}">
+                <view class="comic-cover-pad"></view>
+                <image class="comic-cover-image" src="{{item.cover_url}}"></image>
+            </view>
+            <view class="comic-info">
+                <image class="comic-index-image" src="images/rank-icon-top-{{index+1}}.png"></image>
+                <text class="comic-title text-overflow">{{item.title}}</text>
+                <text class="comic-desc text-overflow">{{item.desc_lated_seqno}}</text>
+            </view>
+        </view>
+    </view>
+    <template is="comic-list" data="{{...rankListCtrl}}"></template>
+</scroll-view>

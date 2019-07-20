@@ -1,0 +1,71 @@
+<template name="tab-indicator">
+    <view class="tab-indicator">
+        <view bindtap="_onTapTab" class="tab-indicator-item {{currentTab=='detail'?'current':''}}" data-tab-name="detail">
+            <text>详情</text>
+        </view>
+        <view bindtap="_onTapTab" class="tab-indicator-item {{currentTab=='chapter'?'current':''}}" data-tab-name="chapter">
+            <text>目录</text>
+            <image class="icon-order {{chapterOrder}} inline-middle" src="images/icon-order.png"></image>
+        </view>
+    </view>
+</template>
+<import src="../public/comic-list/comic-list.wxml"></import>
+<import src="chapter-item/chapter-item.wxml"></import>
+<import src="chapter-nav-btns/chapter-nav-btns.wxml"></import>
+<scroll-view bindscroll="_onScroll" bindscrolltoupper="_onScrollToUpper" bindtouchmove="_onTouch" bindtouchstart="_onTouch" class="scroll-container" scrollIntoView="{{scrollToId}}" scrollY="true" upperThreshold="260">
+    <view class="head">
+        <view class="cover-box">
+            <block wx:if="{{!comicData.is_light_comic}}">
+                <image class="comic-cover-bg {{!comicData.is_light_comic?'use-blur':''}}" mode="aspectFill" src="{{comicData.cover_url}}"></image>
+                <image class="comic-cover in-banner" src="{{comicData.cover_url}}"></image>
+                <view class="comic-cover-mask"></view>
+            </block>
+            <block wx:if="{{comicData.is_light_comic}}">
+                <image class="comic-cover-bg {{!comicData.is_light_comic?'use-blur':''}}" mode="aspectFill" src="{{comicData.extra_cover}}"></image>
+                <image class="light-comic-cover-mask" src="images/light-comic-cover-mask.png"></image>
+            </block>
+            <view class="comic-info in-banner">
+                <view class="comic-title-and-tag">
+                    <text class="comic-title in-banner text-overflow inline-middle">{{comicData.title}}</text>
+                    <text class="comic-tag">{{comicData.theme[0]}}</text>
+                </view>
+                <text class="comic-artist">{{comicData.artist_name}}</text>
+                <text class="comic-pgv">人气：{{comicData.desc_pgv_count}}</text>
+            </view>
+        </view>
+        <view class="collect-box">
+            <image class="icon-collect" src="{{isCollected?'images/icon-collected.png':'images/icon-uncollected.png'}}"></image>
+            <text class="text-collect">{{comicData.desc_coll_count}}</text>
+            <text bindtap="_onTapBtnRead" class="btn-read-comic">{{comicData.read_seqno>0?'续看'+comicData.read_seqno+'话':'开始阅读'}}</text>
+        </view>
+    </view>
+    <view class="tab-box">
+        <template is="tab-indicator" data="{{...tabState}}"></template>
+        <view class="tab-content" hidden="{{tabState.currentTab!='detail'}}">
+            <view class="comic-desc">
+                <text class="comic-desc-title">作品介绍</text>
+                <text class="comic-desc-content">{{comicData.brief_intrd}}</text>
+                <view class="comic-tag-and-score">
+                    <text class="comic-tag color-{{index}}" wx:for="{{comicData.theme}}" wx:key="{{item}}">{{item}}</text>
+                    <text class="comic-score">{{comicData.score}}分</text>
+                </view>
+            </view>
+            <view class="recommend-box">
+                <view class="recommend-list-title">
+                    <text>本作品的漫迷也喜欢这些哦</text>
+                </view>
+                <template is="comic-list" data="{{...recommendListCtrl}}"></template>
+            </view>
+        </view>
+        <view class="tab-content" hidden="{{tabState.currentTab!='chapter'}}">
+            <view class="chapter-list" hidden="{{tabState.chapterOrder=='desc'}}">
+                <template is="chapter-item" data="{{list:chapterList,itemIdHead:'item_',style:comicData.is_light_comic?'light-comic':''}}"></template>
+            </view>
+            <view class="chapter-list desc" hidden="{{tabState.chapterOrder!='desc'}}">
+                <template is="chapter-item" data="{{list:chapterListRev,itemIdHead:'rev_item_',style:comicData.is_light_comic?'light-comic':''}}"></template>
+            </view>
+            <template is="chapter-nav-btns" data="{{scrollDirection:scrollDirection}}"></template>
+        </view>
+        <view class="tab-content" hidden="{{tabState.currentTab!='comment'}}"></view>
+    </view>
+</scroll-view>

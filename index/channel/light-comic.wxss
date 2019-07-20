@@ -1,0 +1,35 @@
+.comic-cover-pad.light-comic {
+    padding-top: 46.6%;
+}
+
+.comic-info.light-comic {
+    position: relative;
+    z-index: 2;
+}
+
+.comic-title.light-comic {
+    display: block;
+    margin-top: 15rpx;
+    margin-left: 30rpx;
+    margin-bottom: 2rpx;
+    color: #535252;
+    font-size: 34rpx;
+}
+
+.comic-artist.light-comic {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 22rpx;
+    right: 30rpx;
+    color: #b2b2b2;
+    font-size: 22rpx;
+}
+
+.comic-chapter-title.light-comic {
+    display: block;
+    margin-left: 30rpx;
+    margin-bottom: 25rpx;
+    color: #b2b2b2;
+    font-size: 26rpx;
+}

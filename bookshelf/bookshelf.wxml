@@ -1,0 +1,27 @@
+<import src="../public/comic-list/comic-list.wxml"></import>
+<view class="top-tab">
+    <text bindtap="_onTapTab" class="top-tab-item {{currentTab=='history'?'current':''}}" data-tab-name="history">历史</text>
+    <image bindtap="_changeComicListMode" class="top-tab-btn" src="{{currentMode=='select'?'images/top-bar-icon-cancel.png':'images/top-bar-icon-edit.png'}}"></image>
+</view>
+<view class="main {{currentMode=='select'?'':'touch-bottom'}}" hidden="{{currentTab!='collection'}}">
+    <template is="scroll-comic-list" data="{{...collectionCtrl}}"></template>
+</view>
+<view class="main {{currentMode=='select'?'':'touch-bottom'}}" hidden="{{currentTab!='history'}}">
+    <view class="history-list" hidden="{{!hasHistory}}">
+        <template is="scroll-comic-list" data="{{...historyCtrl}}"></template>
+    </view>
+    <view class="history-empty" hidden="{{hasHistory}}">
+        <image class="history-empty-pic" src="images/history-empty.png"></image>
+        <text class="history-empty-text">到现在都没有看过一本漫画呐~</text>
+    </view>
+</view>
+<view class="bottom-ctrl" hidden="{{currentMode!='select'}}">
+    <view bindtap="_toggleSelectAll" class="bottom-btn first-btn">
+        <image class="bottom-btn-icon" src="{{allSelected?'images/icon-ctrl-btn-no.png':'images/icon-ctrl-btn-yes.png'}}"></image>
+        <text class="bottom-btn-text">{{allSelected?'取消全选':'全选'}}</text>
+    </view>
+    <view bindtap="_doDelete" class="bottom-btn">
+        <image class="bottom-btn-icon" src="{{noSelected?'images/icon-ctrl-no-del.png':'images/icon-ctrl-del.png'}}"></image>
+        <text class="bottom-btn-text {{noSelected?'disabled':''}}">删除</text>
+    </view>
+</view>

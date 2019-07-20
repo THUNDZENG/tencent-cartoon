@@ -1,0 +1,8 @@
+<template name="scroll-comic-list">
+    <scroll-view bindscrolltolower="{{onScrollLower}}" class="comic-list-wrap" data-name="{{name}}" lowerThreshold="50" scrollTop="{{scrollTop}}" scrollY="true">
+        <include src="base-comic-list.wxml"></include>
+    </scroll-view>
+</template>
+<template name="comic-list">
+    <include src="base-comic-list.wxml"></include>
+</template>

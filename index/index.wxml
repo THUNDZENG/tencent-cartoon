@@ -1,0 +1,48 @@
+<import src="../public/comic-list/comic-list.wxml"></import>
+<import src="banner/banner.wxml"></import>
+<import src="channel/channel-head.wxml"></import>
+<import src="channel/rise-top2.wxml"></import>
+<import src="channel/light-comic.wxml"></import>
+<import src="channel/top5.wxml"></import>
+<view class="container">
+    <view class="banner-box">
+        <template is="banner" data="{{...bannerCtrl}}"></template>
+        <view bindtap="_onTapHistory" class="banner-history text-overflow {{lastCloseHistory<bannerHistory.record_time?'show':'hide'}}" wx:if="{{bannerHistory}}">
+            <text>续看：{{bannerHistory.title}} 第{{bannerHistory.read_seqno}}话</text>
+            <image class="banner-history-close inline-middle" data-btn-name="CloseHistory" src="images/icon-close-history.png"></image>
+        </view>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:1,width:375,name:'recommend',title:'无良推荐'}}"></template>
+        <template is="comic-list" data="{{...recommendCtrl}}"></template>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:2,width:375,name:'hotComic',title:'人气炸子鸡'}}"></template>
+        <template is="comic-list" data="{{...hotCtrl}}"></template>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:3,width:375,name:'todayUpdate',title:'今日我更新'}}"></template>
+        <template is="comic-list" data="{{...todayCtrl}}"></template>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:4,width:375,name:'lightComic',title:'条漫每日君'}}"></template>
+        <template is="light-comic" data="{{...lightComicCtrl}}"></template>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:5,width:390,name:'riseFastComic',title:'上升最快'}}"></template>
+        <template is="rise-top2" data="{{...riseComicCtrls.top2}}"></template>
+        <template is="comic-list" data="{{...riseComicCtrls.behind2}}"></template>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:6,width:375,name:'japanComic',title:'独家日漫'}}"></template>
+        <template is="comic-list" data="{{...japanCtrl}}"></template>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:7,width:375,name:'riseFastNewComic',title:'新作冲冲冲'}}"></template>
+        <template is="comic-list" data="{{...newCtrl}}"></template>
+    </view>
+    <view class="channel">
+        <template is="channel-head" data="{{index:8,width:750,name:'topZone',title:'今日TOP5',noMore:true}}"></template>
+        <template is="top5" data="{{...top5Ctrl}}"></template>
+    </view>
+</view>

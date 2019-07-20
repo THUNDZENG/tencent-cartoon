@@ -1,0 +1,285 @@
+.comic-list {
+    display: block;
+    width: auto;
+}
+
+.comic-list-wrap {
+    height: 100%;
+}
+
+.comic-item-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.comic-title {
+    display: block;
+    color: #535252;
+    font-size: 34rpx;
+}
+
+.comic-desc {
+    display: block;
+    color: #888888;
+    font-size: 26rpx;
+}
+
+.comic-cover {
+    position: relative;
+    z-index: 2;
+    border-radius: 6rpx;
+    background: #efefff;
+    overflow: hidden;
+}
+
+.comic-cover-pad {
+    padding-top: 133.3%;
+}
+
+.comic-cover-image {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6rpx;
+    overflow: hidden;
+}
+
+.comic-info {
+    overflow: hidden;
+}
+
+.comic-continue-read {
+    width: 128rpx;
+    text-align: center;
+}
+
+.comic-continue-read-icon {
+    display: block;
+    width: 48rpx;
+    height: 48rpx;
+    margin: 0 auto;
+}
+
+.comic-continue-read-text {
+    display: block;
+    margin: 6rpx auto;
+    font-size: 26rpx;
+    white-space: nowrap;
+}
+
+.comic-select-icon {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    width: 47rpx;
+    height: 47rpx;
+}
+
+.comic-select-icon.mode-select {
+    display: block;
+}
+
+.comic-item-index {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 14rpx;
+    color: #c5c5c5;
+    font-size: 60rpx;
+    font-weight: 300;
+}
+
+.comic-list-info {
+    text-align: center;
+    padding-top: 20rpx;
+    padding-bottom: 35rpx;
+}
+
+.list-info-icon {
+    width: 60rpx;
+    height: 48rpx;
+    vertical-align: middle;
+}
+
+.list-info-text {
+    color: #969696;
+    font-size: 24rpx;
+}
+
+.comic-continue-read {
+    margin-right: 12rpx;
+}
+/*! Import by _C[8], whose real path we cannot found. */
+.comic-list.plate {
+    margin-top: 10rpx;
+}
+
+.comic-item.plate {
+    margin: 0 10rpx 10rpx 10rpx;
+    background: #fff;
+    border-radius: 6rpx;
+    box-shadow: 0 0 3rpx rgba(9,2,4,.06);
+    transition: transform 300ms ease;
+    transition: transform 300ms ease,-webkit-transform 300ms ease;
+}
+
+.comic-item.plate.mode-select {
+    transform: translate3d(126rpx,0,0);
+}
+
+.comic-item-inner.plate {
+    display: flex;
+    align-items: center;
+    padding: 10rpx;
+}
+
+.comic-cover.plate {
+    width: 140rpx;
+    margin-right: 26rpx;
+}
+
+.comic-info.plate {
+    flex: 1;
+}
+
+.comic-desc.plate {
+    margin-top: 6rpx;
+}
+
+.comic-select-icon.plate {
+    top: 50%;
+    left: -92rpx;
+    transform: translate(0,-50%);
+}
+/*! Import end */
+
+/*! Import by _C[9], whose real path we cannot found. */
+.comic-list.simple {
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.comic-item.simple {
+    margin: 0;
+    background: #fff;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease,-webkit-transform 300ms ease;
+}
+
+.comic-item.simple.mode-select {
+    transform: translate3d(126rpx,0,0);
+}
+
+.comic-item-inner.simple {
+    display: flex;
+    align-items: center;
+    padding: 15rpx 30rpx 15rpx 0;
+    margin: 0 0 0 30rpx;
+    border-bottom: 1rpx solid #eeeeee;
+}
+
+.comic-cover.simple {
+    width: 140rpx;
+    margin-right: 26rpx;
+}
+
+.comic-info.simple {
+    flex: 1;
+}
+
+.comic-desc.simple {
+    margin-top: 6rpx;
+}
+
+.comic-select-icon.simple {
+    top: 50%;
+    left: -92rpx;
+    transform: translate(0,-50%);
+}
+/*! Import end */
+
+/*! Import by _C[7], whose real path we cannot found. */
+.comic-list.grid-column-2 {
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+
+.comic-list.grid-column-2::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.comic-item.grid-column-2 {
+    width: 50%;
+    float: left;
+}
+
+.comic-item-inner.grid-column-2 {
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.comic-cover-pad.grid-column-2 {
+    padding-top: 94%;
+}
+
+.comic-info.grid-column-2 {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 96rpx;
+    background: rgba(255,255,255,.75);
+}
+
+.comic-title.grid-column-2 {
+    margin: 10rpx 20rpx 0 20rpx;
+}
+
+.comic-desc.grid-column-2 {
+    margin: 0 20rpx 0 20rpx;
+}
+
+.comic-list.grid-column-3 {
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+
+.comic-list.grid-column-3::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.comic-item.grid-column-3 {
+    width: 33.3%;
+    float: left;
+}
+
+.comic-item-inner.grid-column-3 {
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.comic-info.grid-column-3 {
+}
+
+.comic-title.grid-column-3 {
+    margin: 4rpx 4rpx 0 4rpx;
+}
+
+.comic-desc.grid-column-3 {
+    margin: 0 4rpx 0 4rpx;
+}
+
+.comic-select-icon.grid-column-3 {
+    top: 224rpx;
+    right: 9rpx;
+}
+/*! Import end */

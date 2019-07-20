@@ -1,0 +1,6 @@
+<template name="channel-head">
+    <view class="channel-head">
+        <image class="channel-title" mode="aspectFit" src="/index/channel/images/channel-title-{{index}}.png" style="width: {{width}}rpx;"></image>
+        <image bindtap="_onTapMore" class="channel-more" data-name="{{name}}" data-title="{{title}}" mode="aspectFit" src="/index/channel/images/channel-more.png" wx:if="{{!noMore}}"></image>
+    </view>
+</template>

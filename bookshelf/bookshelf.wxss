@@ -1,0 +1,136 @@
+@import "../__wuBaseWxss__/10.wxss";
+
+@import "../public/comic-list/comic-list.wxss";
+
+.top-tab,.bottom-ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 51;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top-tab {
+    top: 0;
+    height: 100rpx;
+    background: #fafafa;
+    border-top: 1rpx solid #dadada;
+    border-bottom: 1rpx solid #dadada;
+}
+
+.bottom-ctrl {
+    bottom: 0;
+    height: 120rpx;
+    background: #fff;
+    border-top: 1rpx solid #dadada;
+}
+
+.bottom-btn-icon {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.top-tab-item {
+    display: block;
+    position: relative;
+    z-index: 52;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 75rpx;
+    color: #535252;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.top-tab-item.current {
+    color: #ff9969;
+}
+
+.top-tab-item.current::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 24rpx;
+    margin-left: -10rpx;
+    width: 20rpx;
+    height: 8rpx;
+    border-radius: 8rpx;
+    background: #ff9969;
+}
+
+.top-tab-btn {
+    position: absolute;
+    z-index: 52;
+    top: 50%;
+    right: 30rpx;
+    margin-top: -24rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.bottom-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid #eaeaea;
+}
+
+.bottom-btn.first-btn {
+    border-left: 0 none;
+}
+
+.bottom-btn-icon,.bottom-btn-text {
+    display: block;
+}
+
+.bottom-btn-icon {
+    width: 47rpx;
+    height: 47rpx;
+    margin-right: 10rpx;
+}
+
+.bottom-btn-text {
+    color: #535252;
+    font-size: 32rpx;
+}
+
+.bottom-btn-text.disabled {
+    color: #b7b7b7;
+}
+
+.main {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-top: 100rpx;
+    padding-bottom: 120rpx;
+}
+
+.main.touch-bottom {
+    padding-bottom: 0;
+}
+
+.history-empty {
+    padding-top: 100rpx;
+    text-align: center;
+}
+
+.history-empty-pic {
+    display: block;
+    width: 450rpx;
+    height: 360rpx;
+    margin: 0 auto 20rpx auto;
+}
+
+.history-empty-text {
+    font-size: 26rpx;
+    color: #51241e;
+}

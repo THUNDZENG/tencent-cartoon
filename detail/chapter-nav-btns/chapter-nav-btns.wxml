@@ -1,0 +1,10 @@
+<template name="chapter-nav-btns">
+    <view bindtap="_navToCurrentChap" class="btn-chapter-nav current">
+        <image class="btn-chapter-nav-icon" src="images/icon-locate.png"></image>
+        <text class="btn-chapter-nav-text">当前</text>
+    </view>
+    <view bindtap="_navTopOrBottom" class="btn-chapter-nav top-bottom" data-direction="{{scrollDirection}}">
+        <image class="btn-chapter-nav-icon" src="{{scrollDirection=='up'?'images/icon-back-top.png':'images/icon-drop-bottom.png'}}"></image>
+        <text class="btn-chapter-nav-text">{{scrollDirection=='up'?'顶部':'底部'}}</text>
+    </view>
+</template>

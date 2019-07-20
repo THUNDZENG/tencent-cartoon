@@ -1,0 +1,2 @@
+<import src="../public/comic-list/comic-list.wxml"></import>
+<template is="scroll-comic-list" data="{{...simpleListCtrl}}"></template>

@@ -1,0 +1,11 @@
+<template name="chapter-item">
+    <view bindtap="_onTapChapter" class="chapter-item {{style}}" data-chapter-id="{{item.chapter_id}}" id="{{itemIdHead+item.seq_no}}" wx:for="{{list}}" wx:key="{{item.chapter_id}}">
+        <image class="chapter-cover" src="{{item.pic}}" wx:if="{{style=='light-comic'&&item.pic}}"></image>
+        <view class="chapter-info {{style}} text-overflow">
+            <text class="chapter-seq-no {{item.is_read_history?'read-locate':''}}">{{item.seq_no}}话 - {{item.title}}</text>
+            <image class="chapter-icon inline-middle" src="images/icon-lock.png" wx:if="{{item.vip_state==2}}"></image>
+            <text class="update-time" wx:if="{{style!='lite'&&item.desc_update_time}}">{{item.desc_update_time}}</text>
+            <image class="state-icon {{item.is_read_history?'':'wide-tag'}} {{style}}" src="{{item.is_read_history?'images/icon-locate.png':'images/tag-new.png'}}" wx:if="{{item.desc_update_time||item.is_read_history}}"></image>
+        </view>
+    </view>
+</template>

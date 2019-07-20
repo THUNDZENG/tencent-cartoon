@@ -1,0 +1,41 @@
+.container {
+    overflow-x: hidden;
+}
+
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inline-middle {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comic-tag {
+    display: inline-block;
+    vertical-align: middle;
+    width: 66rpx;
+    height: 28rpx;
+    border-radius: 28rpx;
+    margin-right: 5rpx;
+    color: #fff;
+    opacity: .8;
+    font-size: 20rpx;
+    line-height: 1.4;
+    text-align: center;
+    background: #f9ac27;
+}
+
+.comic-tag.color-1 {
+    background: #99d256;
+}
+
+.comic-tag.color-2 {
+    background: #eb6056;
+}
+
+.comic-tag.color-3 {
+    background: #ff9a6a;
+}

@@ -1,0 +1,76 @@
+@import "../__wuBaseWxss__/10.wxss";
+
+@import "../public/comic-list/comic-list.wxss";
+
+@import "banner/banner.wxss";
+
+.channel {
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.channel-head {
+    display: flex;
+    justify-content: space-between;
+    height: 101rpx;
+}
+
+.channel-title {
+    display: block;
+    height: 100%;
+}
+
+.channel-more {
+    display: block;
+    width: 98rpx;
+    height: 37rpx;
+    margin-top: 40rpx;
+    margin-right: 30rpx;
+}
+
+@import "channel/rise-top2.wxss";
+
+@import "channel/light-comic.wxss";
+
+@import "channel/top5.wxss";
+
+.comic-list.grid-column-2,.comic-list.grid-column-3 {
+    margin-top: 0;
+}
+
+.banner-box {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-history {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    bottom: 22rpx;
+    max-width: 90%;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding-left: 24rpx;
+    border-radius: 50rpx 0 0 50rpx;
+    overflow: hidden;
+    background: #ff9b6a;
+    color: #fff;
+    font-size: 22rpx;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease,-webkit-transform 300ms ease;
+}
+
+.banner-history.show {
+    transform: translate3d(0,0,0);
+}
+
+.banner-history.hide {
+    transform: translate3d(100%,0,0);
+}
+
+.banner-history-close {
+    width: 18rpx;
+    height: 18rpx;
+    padding: 16rpx;
+}

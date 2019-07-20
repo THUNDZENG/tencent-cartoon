@@ -1,0 +1,117 @@
+.rank-list {
+    background: #fff;
+    margin-top: 20rpx;
+    padding-bottom: 26rpx;
+    overflow: hidden;
+}
+
+.rank-list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.rank-item {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.rank-item-inner {
+    position: relative;
+    z-index: 1;
+    margin-top: 20rpx;
+}
+
+.rank-item-inner.odd {
+    margin-left: 20rpx;
+    margin-right: 26rpx;
+}
+
+.rank-item-inner.even {
+    margin-left: 26rpx;
+    margin-right: 20rpx;
+}
+
+.rank-icon-pad {
+    padding-top: 49%;
+}
+
+.rank-icon-image {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.classify-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+}
+
+.classify-title::before,.classify-title::after {
+    content: '';
+    display: block;
+    width: 220rpx;
+    height: 0;
+    border-top: 1rpx solid #b2b2b2;
+}
+
+.classify-title-text {
+    display: block;
+    margin: 0 7rpx;
+    color: #b2b2b2;
+    font-size: 28rpx;
+}
+
+.classify-list {
+    margin-left: 20rpx;
+}
+
+.classify-list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.classify-item {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.classify-item-inner {
+    position: relative;
+    z-index: 1;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    background: #fff;
+    border-radius: 6rpx;
+    overflow: hidden;
+}
+
+.classify-icon-pad {
+    padding-top: 58.5%;
+}
+
+.classify-icon-image {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.classify-name {
+    position: absolute;
+    z-index: 3;
+    top: 70rpx;
+    left: 32rpx;
+    color: #535252;
+    font-size: 32rpx;
+}

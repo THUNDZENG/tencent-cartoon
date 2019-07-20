@@ -1,0 +1,13 @@
+<template name="banner">
+    <view class="banner">
+        <view class="banner-pad"></view>
+        <swiper autoplay="true" bindchange="{{onCurrentChange}}" circular="true" class="banner-swiper" data-name="{{name}}">
+            <swiper-item bindtap="{{onTap}}" class="banner-item" data-comic-id="{{item.comic_id}}" data-index="{{index}}" data-name="{{name}}" wx:for="{{data}}" wx:key="{{index}}">
+                <image class="banner-image" mode="aspectFill" src="{{item.pic}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class="banner-indicator-list">
+            <view class="banner-indicator {{index==currentIndex?'current':''}}" wx:for="{{data}}" wx:key="{{index}}"></view>
+        </view>
+    </view>
+</template>

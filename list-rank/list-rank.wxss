@@ -1,0 +1,66 @@
+@import "../__wuBaseWxss__/10.wxss";
+
+@import "../public/comic-list/comic-list.wxss";
+
+.rank-list-head {
+    position: relative;
+    z-index: 1;
+    height: 455rpx;
+    margin: 10rpx 10rpx 0 10rpx;
+    background: #fff;
+    border-radius: 6rpx;
+    box-shadow: 0 0 3rpx rgba(9,2,4,.06);
+    overflow: hidden;
+}
+
+.rank-list-head-item {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 15rpx;
+    text-align: center;
+}
+
+.rank-list-head-item::before,.rank-list-head-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: auto;
+    height: 0;
+    border-top: 1rpx solid #c5c5c5;
+}
+
+.rank-list-head-item::before {
+    top: -6rpx;
+    left: 4rpx;
+    right: 4rpx;
+}
+
+.rank-list-head-item::after {
+    top: -12rpx;
+    left: 8rpx;
+    right: 8rpx;
+}
+
+.rank-list-head-item.item-0 {
+    width: 210rpx;
+    margin-left: -105rpx;
+}
+
+.rank-list-head-item.item-1 {
+    width: 174rpx;
+    margin-left: -314rpx;
+}
+
+.rank-list-head-item.item-2 {
+    width: 174rpx;
+    margin-left: 140rpx;
+}
+
+.comic-index-image {
+    display: block;
+    margin: 8rpx auto 0 auto;
+    width: 40rpx;
+    height: 40rpx;
+}

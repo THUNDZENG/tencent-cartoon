@@ -1,0 +1,22 @@
+<view>
+    <view class="rank-list">
+        <view bindtap="_onTapRank" class="rank-item" data-id="{{item.id}}" data-name="{{item.name}}" wx:for="{{rank}}" wx:key="{{item.id}}">
+            <view class="rank-item-inner {{index%2?'odd':'even'}}">
+                <view class="rank-icon-pad"></view>
+                <image class="rank-icon-image" src="{{item.icon_url}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="classify-title">
+        <text class="classify-title-text">热门分类</text>
+    </view>
+    <view class="classify-list">
+        <view bindtap="_onTapClassify" class="classify-item" data-id="{{item.id}}" data-name="{{item.name}}" wx:for="{{classify}}" wx:key="{{item.id}}">
+            <view class="classify-item-inner">
+                <view class="classify-icon-pad"></view>
+                <image class="classify-icon-image" src="{{item.icon_url}}"></image>
+                <text class="classify-name">{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+</view>

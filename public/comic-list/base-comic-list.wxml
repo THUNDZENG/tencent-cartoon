@@ -1,0 +1,26 @@
+<view class="comic-list {{style}}">
+    <view bindtap="{{onTap}}" class="comic-item {{style}} {{mode=='select'?'mode-select':''}}" data-comic-id="{{item.comic_id}}" data-name="{{name}}" wx:for="{{data}}" wx:key="{{item.comic_id}}">
+        <view class="comic-item-inner {{style}}">
+            <view class="comic-cover {{style}}">
+                <view class="comic-cover-pad {{style}}"></view>
+                <image class="comic-cover-image {{style}}" data-tap-part="cover" mode="aspectFill" src="{{item.cover_url}}"></image>
+            </view>
+            <view class="comic-info {{style}}">
+                <text class="comic-title text-overflow {{style}}">{{item.title}}</text>
+                <text class="comic-desc text-overflow {{style}}" wx:if="{{descFields.length>0}}">{{item[ descFields[0] ]||item['brief_intrd']||'　'}}</text>
+                <text class="comic-desc text-overflow {{style}}" wx:if="{{descFields.length>1}}">{{item[ descFields[1] ]}}</text>
+                <text class="comic-desc text-overflow {{style}}" wx:if="{{descFields.length>2}}">{{item[ descFields[2] ]}}</text>
+            </view>
+            <view class="comic-continue-read {{style}}" wx:if="{{showContinueRead}}">
+                <image class="comic-continue-read-icon" src="/public/comic-list/images/comic-continue-read.png"></image>
+                <text class="comic-continue-read-text">{{item.continue_read}}</text>
+            </view>
+            <text class="comic-item-index" wx:if="{{itemStartIndex}}">{{itemStartIndex+index}}</text>
+            <image class="comic-select-icon {{style}} {{mode=='select'?'mode-select':''}}" src="{{selected[item.comic_id]?'/public/comic-list/images/comic-icon-selected.png':'/public/comic-list/images/comic-icon-unselected.png'}}" wx:if="{{canSelect}}"></image>
+        </view>
+    </view>
+    <view class="comic-list-info" wx:if="{{showListState}}">
+        <image class="list-info-icon" src="{{state=='over'?'/public/comic-list/images/list-info-icon-over.png':'/public/comic-list/images/list-info-icon-fly.png'}}"></image>
+        <text class="list-info-text">{{state=='over'?'已加载完毕~':'正在加载中~'}}</text>
+    </view>
+</view>

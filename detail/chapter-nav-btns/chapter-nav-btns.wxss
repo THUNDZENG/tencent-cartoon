@@ -1,0 +1,33 @@
+.btn-chapter-nav {
+    position: fixed;
+    z-index: 20;
+    right: 30rpx;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 100%;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 8rpx rgba(4,0,0,.1);
+    text-align: center;
+}
+
+.btn-chapter-nav.current {
+    bottom: 160rpx;
+}
+
+.btn-chapter-nav.top-bottom {
+    bottom: 55rpx;
+}
+
+.btn-chapter-nav-icon {
+    display: block;
+    width: 32rpx;
+    height: 32rpx;
+    margin: 18rpx auto 4rpx auto;
+}
+
+.btn-chapter-nav-text {
+    display: block;
+    color: #333333;
+    font-size: 18rpx;
+}
